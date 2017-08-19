@@ -8,8 +8,17 @@
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Entities\OAuthAuthentication.cs" />
+    <Compile Remove="Services\ICreditCardService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="7.1.1" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.4.17" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\IConfigService.config" />
   </ItemGroup>
 </Project>

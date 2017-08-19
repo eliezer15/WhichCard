@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhichCard", "WhichCard\WhichCard.csproj", "{07DF4FD3-214B-46B7-9390-FDF46DE701E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhichCard.Api", "WhichCard.Api\WhichCard.Api.csproj", "{666BD3ED-C8DE-432D-97DC-89379DA044F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhichCard.IntegrationTests", "WhichCard.IntegrationTests\WhichCard.IntegrationTests.csproj", "{63CC0E46-08DE-4072-BA1C-3533D0BEA21D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,13 @@ Global
 		{07DF4FD3-214B-46B7-9390-FDF46DE701E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DF4FD3-214B-46B7-9390-FDF46DE701E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DF4FD3-214B-46B7-9390-FDF46DE701E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{666BD3ED-C8DE-432D-97DC-89379DA044F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666BD3ED-C8DE-432D-97DC-89379DA044F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666BD3ED-C8DE-432D-97DC-89379DA044F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666BD3ED-C8DE-432D-97DC-89379DA044F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CC0E46-08DE-4072-BA1C-3533D0BEA21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CC0E46-08DE-4072-BA1C-3533D0BEA21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CC0E46-08DE-4072-BA1C-3533D0BEA21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CC0E46-08DE-4072-BA1C-3533D0BEA21D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

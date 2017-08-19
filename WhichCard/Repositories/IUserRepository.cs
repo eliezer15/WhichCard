@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 using WhichCard.Entities;
 
 namespace WhichCard.Repositories
 {
     public interface IUserRepository
     {
-        void Insert(User user);
+        Task InsertAsync(User user);
 
-        void Delete(string id);
+        Task DeleteAsync(User user);
 
-        void Get(string id);
+        Task<User> GetAsync(string id);
     }
 }

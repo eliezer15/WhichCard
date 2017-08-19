@@ -10,5 +10,6 @@ namespace WhichCard.Entities
         public Color Color { get; set; }
 
         public IEnumerable<Reward> Rewards { get; set; }
+
     }
 }
