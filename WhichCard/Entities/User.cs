@@ -11,6 +11,8 @@ namespace WhichCard.Entities
 
         public string EmailAddress { get; set; }
 
-        public IEnumerable<Category> ShoppingCategory { get; set; }
+        public IEnumerable<string> ShoppingCategoryIds { get; set; }
+
+        public IEnumerable<string> CreditCardIds { get; set; }
     }
 }
