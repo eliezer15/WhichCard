@@ -9,8 +9,8 @@ namespace WhichCard.Repositories
 
         void Delete(string id);
 
-        void Get(string id);
+        Category Get(string id);
 
-        void GetAll();
+        Category GetAll(string ids);
     }
 }

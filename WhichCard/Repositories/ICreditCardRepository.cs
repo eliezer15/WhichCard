@@ -12,8 +12,8 @@ namespace WhichCard.Repositories
 
         CreditCard Get(string id);
 
-        IEnumerable<CreditCard> GetAllByUser(string userId);
+        IEnumerable<CreditCard> GetAll(IEnumerable<string> ids);
 
-        IEnumerable<CreditCard> GetByCategory(Category category);
+        IEnumerable<CreditCard> GetByRewardsCategory(string categoryId);
     }
 }
