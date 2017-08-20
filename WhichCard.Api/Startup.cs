@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WhichCard.Entities;
+using WhichCard.Repositories;
+using WhichCard.Services;
+using WhichCard.Validators;
 
 namespace WhichCard.Api
 {
@@ -29,6 +33,11 @@ namespace WhichCard.Api
         {
             // Add framework services.
             services.AddMvc();
+
+			//Business services
+			services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEntityValidator<User>, UserValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
