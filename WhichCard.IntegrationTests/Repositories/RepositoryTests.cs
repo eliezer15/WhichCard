@@ -11,10 +11,6 @@ namespace WhichCard.IntegrationTests.Repositories
 {
     public class RepositoryTests
     {
-        readonly BasicAWSCredentials credentials = new BasicAWSCredentials(
-            "AKIAJVOR45GP4CPIRPVA",
-            "x664vnMiL/uWULOx1NVidxdASiRD2E+lwyWgYhgl");
-
         [Fact]
         public async Task Users_CRUD()
         {
@@ -28,7 +24,7 @@ namespace WhichCard.IntegrationTests.Repositories
                 CreditCards = new List<string> { "Venture", "Fargo" }
             };
 
-            var repo = new UserRepository(credentials);
+            var repo = new UserRepository();
 
             //Create
             await repo.InsertAsync(user);
@@ -87,7 +83,7 @@ namespace WhichCard.IntegrationTests.Repositories
 				}
 			};
 
-            var repo = new CreditCardRepository(credentials);
+            var repo = new CreditCardRepository();
 
 			//Insert
 			await repo.InsertAsync(venture);

@@ -6,10 +6,6 @@ namespace WhichCard.Repositories
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        public UserRepository(BasicAWSCredentials credentials) : base(credentials)
-		{
-		}
-
 		public Task DeleteAsync(User user) => _context.DeleteAsync(user);
 
         public Task<User> GetAsync(string email) => _context.LoadAsync<User>(email, DefaultOperationConfig);

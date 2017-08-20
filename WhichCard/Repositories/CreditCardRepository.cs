@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Amazon.Runtime;
 using WhichCard.Entities;
 
 namespace WhichCard.Repositories
 {
     public class CreditCardRepository : BaseRepository, ICreditCardRepository
     {
-        public CreditCardRepository(BasicAWSCredentials credentials) : base(credentials)
-        {
-        }
-
         public Task Deleteasync(CreditCard creditCard) => _context.DeleteAsync(creditCard);
 
         public Task InsertAsync(CreditCard creditCard) => _context.SaveAsync(creditCard);
