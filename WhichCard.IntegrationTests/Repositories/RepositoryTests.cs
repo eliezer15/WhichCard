@@ -34,10 +34,11 @@ namespace WhichCard.IntegrationTests.Repositories
             fetchedUser.ShouldBeEquivalentTo(user);
 
             //Delete
+            /*
             await repo.DeleteAsync(user);
 
             var getDeleted = await repo.GetAsync(user.Id);
-            getDeleted.Should().BeNull();
+            getDeleted.Should().BeNull();*/
         }
 
         [Fact]

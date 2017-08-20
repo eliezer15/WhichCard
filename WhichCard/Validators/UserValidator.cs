@@ -7,9 +7,10 @@ namespace WhichCard.Validators
     {
         public UserValidator()
         {
+            RuleFor(user => user.Id).NotNull().NotEmpty();
             RuleFor(user => user.Email).NotNull().EmailAddress();
-            RuleFor(user => user.FirstName).NotNull();
-            RuleFor(user => user.LastName).NotNull();
+            RuleFor(user => user.FirstName).NotNull().NotEmpty();
+            RuleFor(user => user.LastName).NotNull().NotEmpty();
         }
     }
 }

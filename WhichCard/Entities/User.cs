@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Amazon.DynamoDBv2.DataModel;
 
 namespace WhichCard.Entities
@@ -14,6 +15,8 @@ namespace WhichCard.Entities
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        public DateTime CreationDate { get; set; }
 
         /// <summary>
         /// Names of Shopping categories for this user
