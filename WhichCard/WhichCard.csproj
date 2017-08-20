@@ -13,6 +13,7 @@
   <ItemGroup>
     <Compile Remove="Entities\OAuthAuthentication.cs" />
     <Compile Remove="Services\ICreditCardService.cs" />
+    <Compile Remove="Entities\Color.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="7.1.1" />

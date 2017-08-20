@@ -1,15 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using Amazon.DynamoDBv2.DataModel;
+using System.Collections.Generic;
 namespace WhichCard.Entities
 {
-    public class CreditCard
+    [DynamoDBTable("CreditCards")]
+    public class CreditCard : IEntity
     {
-        public string Id { get; set; }
+        [DynamoDBHashKey]
+        public string UserId { get; set; }
 
+        [DynamoDBRangeKey]
         public string Name { get; set; }
 
         public Color Color { get; set; }
 
-        public IEnumerable<Reward> Rewards { get; set; }
-
+        public List<Reward> Rewards { get; set; }
     }
+
+	public class Color
+	{
+		public string RgbValue { get; set; }
+	}
 }

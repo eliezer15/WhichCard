@@ -5,7 +5,7 @@ namespace WhichCard.Repositories
 {
     public interface ICategoryRepository
     {
-        void Insert(Category category);
+        void InsertAsync(Category category);
 
         void Delete(string id);
 

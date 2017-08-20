@@ -3,11 +3,9 @@ using System.Collections.Generic;
 
 namespace WhichCard.Entities
 {
-    public abstract class Reward
+    public class Reward
     {
-        public string Id { get; set; }
-
-        public IEnumerable<Category> Categories { get; set; }
+        public List<Category> Categories { get; set; }
 
         public DateTime Expiration { get; set; }
 

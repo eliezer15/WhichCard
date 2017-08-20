@@ -1,13 +1,10 @@
-﻿using System;
-namespace WhichCard.Entities
+﻿namespace WhichCard.Entities
 {
     /// <summary>
     /// Represents a shopping or reward category
     /// </summary>
-    public class Category
+    public class Category : IEntity
     {
-        public string Id { get; set; }
-
         public string Name { get; set; }
 
         public Icon Icon { get; set; }

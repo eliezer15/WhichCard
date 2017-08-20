@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using WhichCard.Entities;
 
 namespace WhichCard.Repositories
 {
     public interface ICreditCardRepository
     {
-        void Insert(CreditCard creditCard);
+        Task InsertAsync(CreditCard creditCard);
 
-        void Delete(string id);
+        Task Deleteasync(CreditCard creditCard);
 
-        CreditCard Get(string id);
+        Task<CreditCard> GetAsync(string userId, string name);
 
-        IEnumerable<CreditCard> GetAll(IEnumerable<string> ids);
-
-        IEnumerable<CreditCard> GetByRewardsCategory(string categoryId);
+        Task<List<CreditCard>> GetByUserAsync(string userId);
     }
 }
