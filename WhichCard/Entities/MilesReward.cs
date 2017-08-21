@@ -3,8 +3,8 @@ namespace WhichCard.Entities
 {
     public class MilesReward : Reward
     {
-        public decimal AmountToSpend { get; set; }
+        public decimal MilesPerDollarSpent { get; set; }
 
-        public int MilesAwarded { get; set; }
+        public decimal DollarPricePerMile { get; set; }
     }
 }

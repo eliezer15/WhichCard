@@ -8,11 +8,14 @@ namespace WhichCard.Api.Controllers
     [Route("api/v1/[controller]")]
     public class UsersController : Controller
     {
-        IUserService _userService;
+        readonly IUserService _userService;
+        readonly ICreditCardRecommendationService _recommendationService;
 
-        public UsersController(IUserService userService)
+        public UsersController(IUserService userService, 
+                               ICreditCardRecommendationService recommendationService)
         {
             _userService = userService;
+            _recommendationService = recommendationService;
         }
 
         [HttpGet("{id}")]
@@ -25,6 +28,19 @@ namespace WhichCard.Api.Controllers
             }
 
             return Ok(user);
+        }
+
+        [HttpGet("{id}/CardRecommendations")]
+        public async Task<IActionResult> GetCardRecommendations(string id)
+        {
+			var user = await _userService.GetAsync(id);
+			if (user == null)
+			{
+				return NotFound(id);
+			}
+
+            var recommendation = _recommendationService.GetRecommendations(user);
+            return Ok(recommendation);
         }
 
         [HttpPut("{id}")]

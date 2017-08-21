@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 namespace WhichCard.Entities
 {
-    [DynamoDBTable("CreditCards")]
     public class CreditCard : IEntity
     {
-        [DynamoDBHashKey]
-        public string UserId { get; set; }
-
-        [DynamoDBRangeKey]
         public string Name { get; set; }
 
         public Color Color { get; set; }
 
+        [DynamoDBProperty(typeof(RewardTypeConverter))]
         public List<Reward> Rewards { get; set; }
     }
 

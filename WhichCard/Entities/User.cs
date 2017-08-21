@@ -16,18 +16,10 @@ namespace WhichCard.Entities
 
         public string Email { get; set; }
 
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; } = DateTime.Now;
 
-        /// <summary>
-        /// Names of Shopping categories for this user
-        /// </summary>
-        /// <value>The shopping categories.</value>
-        public List<string> ShoppingCategories { get; set; }
+        public List<Category> ShoppingCategories { get; set; } = new List<Category>();
 
-        /// <summary>
-        /// Names of Credit Cards for this user
-        /// </summary>
-        /// <value>The credit cards.</value>
-        public List<string> CreditCards { get; set; }
+        public List<CreditCard> CreditCards { get; set; } = new List<CreditCard>();
     }
 }

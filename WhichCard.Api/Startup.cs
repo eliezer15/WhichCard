@@ -37,7 +37,8 @@ namespace WhichCard.Api
 			//Business services
 			services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IEntityValidator<User>, UserValidator>();
+            services.AddSingleton<IEntityValidator<User>, UserValidator>();
+            services.AddSingleton<ICreditCardRecommendationService, CreditCardRecommendationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

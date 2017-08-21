@@ -5,6 +5,8 @@ namespace WhichCard.Entities
     {
         public decimal AmountToSpend { get; set; }
 
-        public decimal RewardAmount { get; set; }
+        public CashbackReward Cashback { get; set; }
+
+        public MilesReward Miles { get; set; }
     }
 }
